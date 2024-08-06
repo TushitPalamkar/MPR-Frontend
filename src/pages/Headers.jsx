@@ -24,7 +24,7 @@ export default function Header(){
                </>
           ) : (
             <>
-            <Link to={`/getsavedcourses/${id}`}>Saved Recipe</Link>
+            <Link to={`/getsavedcourses/${id}`}>Saved Courses</Link>
             <Link to='/' onClick={Logout}>Logout</Link>
             </>
           )}
