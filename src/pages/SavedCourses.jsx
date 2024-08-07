@@ -22,7 +22,7 @@ export default function SavedCourses() {
     }, [id]);
 
     return (
-        <div>
+       <div>
             <h1>Saved Courses</h1>
             <div className="saved-courses-grid">
                 {courses.length > 0 ? (
@@ -34,7 +34,7 @@ export default function SavedCourses() {
                                 <img className="course-image" src={course.courseimg} alt={course.title} />
                             </div>
                             <div className="course-actions">
-                                <button className="course-button">Unsave</button>
+                               
                             </div>
                         </div>
                     ))
