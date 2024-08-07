@@ -6,7 +6,7 @@ export default function Courses({_id,title,description,instructor,courseimg}){
         <>
         <h2>{title}</h2>
         <div>
-        <p>{description}</p>
+        
         <p>{instructor}</p>
         <img src={courseimg} alt="Course Image"/>
         <Link to={`/getonecourse/${_id}`}>View Course</Link>
