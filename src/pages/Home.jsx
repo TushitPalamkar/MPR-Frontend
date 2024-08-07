@@ -13,7 +13,7 @@ export default function Home(){
         getcourses()
     },[])
     return(
-        <div>{
+       <div className="homepage">{
             course.map((item)=>(
                 <Courses key={item._id}{...item}/>
             )
