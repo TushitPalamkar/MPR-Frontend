@@ -27,7 +27,7 @@ export default function OneCourse() {
     }
     console.log(id);
     return (
-       <div className="course-container">
+      <div className="onecourse">
         <h1>Course Details</h1>
         {course ? (
             <div>
