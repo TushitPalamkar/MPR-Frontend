@@ -27,18 +27,20 @@ export default function OneCourse() {
     }
     console.log(id);
     return (
-        <div>
-            <h1>Course Details</h1>
-            {course ? (
-                <div>
-                    <h2>{course.title}</h2>
-                    <p>{course.description}</p>
-                    <img src={course.courseimg} alt="" />
-                    <button onClick={savecourses}>Save Course</button>
+       <div className="course-container">
+        <h1>Course Details</h1>
+        {course ? (
+            <div>
+                <h2 className="course-title">{course.title}</h2>
+                <div className="course-details">
+                    <p className="course-description">{course.description}</p>
+                    <img className="course-image" src={course.courseimg} alt={course.title} />
                 </div>
-            ) : (
-                <p>Loading...</p>
-            )}
-        </div>
+                <button className="course-button" onClick={savecourses}>Save Course</button>
+            </div>
+        ) : (
+            <p>Loading...</p>
+        )}
+    </div>
     );
 }
