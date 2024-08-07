@@ -24,17 +24,24 @@ export default function SavedCourses() {
     return (
         <div>
             <h1>Saved Courses</h1>
-            {courses.length > 0 ? (
-                courses.map(course => (
-                    <div key={course._id}>
-                        <h2>{course.title}</h2>
-                        <p>{course.description}</p>
-                        <img src={course.courseimg} alt={course.title} />
-                    </div>
-                ))
-            ) : (
-                <p>Loading...</p>
-            )}
+            <div className="saved-courses-grid">
+                {courses.length > 0 ? (
+                    courses.map(course => (
+                        <div key={course._id} className="course-container">
+                            <h2 className="course-title">{course.title}</h2>
+                            <div className="course-details">
+                                <p className="course-description">{course.description}</p>
+                                <img className="course-image" src={course.courseimg} alt={course.title} />
+                            </div>
+                            <div className="course-actions">
+                                <button className="course-button">Unsave</button>
+                            </div>
+                        </div>
+                    ))
+                ) : (
+                    <p>Loading...</p>
+                )}
+            </div>
         </div>
     );
 }
