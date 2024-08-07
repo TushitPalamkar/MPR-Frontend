@@ -11,7 +11,8 @@ export default function Courses({_id,title,description,instructor,courseimg}){
                 <p className="course-instructor">Instructor: {instructor}</p>
                 <img className="course-image" src={courseimg} alt="Course" />
                 <Link className="course-link" to={`/getonecourse/${_id}`}>View Course</Link>
-                <button className="course-button">Enroll Now</button>
+             
+                
             </div>
         </div>
         </>
