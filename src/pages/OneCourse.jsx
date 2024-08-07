@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from 'axios';
-
+import { useCookies } from "react-cookie";
 export default function OneCourse() {
     const [course, setCourse] = useState(null); // Initial state should match expected data structure
     const { id } = useParams(); // Destructure the specific parameter
     const userID=window.localStorage.getItem('userID')
+    const[cookies,setCookies]=useCookies(["access-tokens"])
     useEffect(() => {
         async function getSingleCourse() {
             try {
@@ -27,7 +28,7 @@ export default function OneCourse() {
     }
     console.log(id);
     return (
-      <div className="onecourse">
+        <div className="onecourse">
         <h1>Course Details</h1>
         {course ? (
             <div>
@@ -36,7 +37,12 @@ export default function OneCourse() {
                     <p className="course-description">{course.description}</p>
                     <img className="course-image" src={course.courseimg} alt={course.title} />
                 </div>
-                <button className="course-button" onClick={savecourses}>Save Course</button>
+                {
+                    cookies["access-tokens"]?(<button className="course-button" onClick={savecourses}>Save Course</button>):(
+                        <p>Login to Save the Course!</p>
+                    )
+                }
+                
             </div>
         ) : (
             <p>Loading...</p>
