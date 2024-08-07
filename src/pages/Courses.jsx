@@ -4,13 +4,15 @@ export default function Courses({_id,title,description,instructor,courseimg}){
   
     return(
         <>
-        <h2>{title}</h2>
-        <div>
-        
-        <p>{instructor}</p>
-        <img src={courseimg} alt="Course Image"/>
-        <Link to={`/getonecourse/${_id}`}>View Course</Link>
-        <button></button>
+       <div className="course-container">
+            <h2 className="course-title">{title}</h2>
+            <div className="course-details">
+                <p className="course-description">{description}</p>
+                <p className="course-instructor">Instructor: {instructor}</p>
+                <img className="course-image" src={courseimg} alt="Course" />
+                <Link className="course-link" to={`/getonecourse/${_id}`}>View Course</Link>
+                <button className="course-button">Enroll Now</button>
+            </div>
         </div>
         </>
     );
