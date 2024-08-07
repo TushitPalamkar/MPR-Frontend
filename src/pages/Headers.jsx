@@ -11,7 +11,7 @@ export default function Header(){
         window.localStorage.removeItem('userID')
     }
     return(
-        <header>
+   <header>
         <h2>
           <Link to="/">EducationApp</Link>
         </h2>
