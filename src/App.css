@@ -225,3 +225,9 @@ body {
   margin: auto;
   
 }
+.saved-courses-grid{
+    display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
