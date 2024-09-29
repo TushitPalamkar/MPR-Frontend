@@ -277,6 +277,7 @@ header nav a:hover {
   opacity: 0; /* Initially hidden */
   transform: translateY(50px); /* Start from below */
   transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+  background-image: url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png');
 }
 
 .home-display.visible {
