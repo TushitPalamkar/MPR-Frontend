@@ -12,6 +12,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #fff;
   overflow-x: hidden;
+  background-image: url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png');
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center;
+  background-size:cover;
 }
 
 /* Header styles */
