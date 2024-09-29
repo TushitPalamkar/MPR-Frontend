@@ -1,31 +1,34 @@
-
+/* Global styles */
 * {
   margin: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
-body{
-  background-image: url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png');
-  background-repeat:no-repeat;
-  background-attachment:fixed;
-  background-position:center;
-  background-size:cover;
+
+/* General body and scroll setup */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  overflow-x: hidden;
 }
 
+/* Header styles */
 header {
-  background-color: #fff; 
-  color: #333; 
+  background-color: #fff;
+  color: #333;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h2 a {
   font-size: 1.5rem;
-  color: #007bff; 
+  color: #007bff;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -47,38 +50,29 @@ header nav a {
 
 header nav a:hover {
   background-color: #007bff;
-  color: #fff; 
-}
-body {
-  margin: 0;
-  padding: 0;
-  
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat; 
+  color: #fff;
 }
 
-.loginbody{
+/* Login styles */
+.loginbody {
   background-image: url('https://i.pinimg.com/originals/7f/e7/74/7fe774bbacce09f00cb5b2e3cbc48db3.png');
 }
+
 .loginpage {
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   flex-direction: column;
   padding: 30px;
   font-size: 1.5rem;
-  border: 1px solid gray; 
+  border: 1px solid gray;
   border-radius: 10px;
   width: 100%;
-  max-width: 400px; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  background-color: #fff; 
-  margin: 150px auto; 
-  
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin: 150px auto;
 }
-
-
 
 .loginpage button {
   background-color: #007bff;
@@ -120,47 +114,14 @@ body {
 }
 
 /* Courses styles */
-.course-container {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  transition: transform 0.2s;
-  max-width: 400px;
-}
-.homepage{
+.homepage {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
-.course-container {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 16px;
-  margin: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  transition: transform 0.2s;
-  max-width: 400px; 
-}
 
-.course-container:hover {
-  transform: translateY(-4px);
-}
-
-.course-title {
-  font-size: 1.5em;
-  color: #333;
-  margin-bottom: 8px;
-}
-
-.course-details {
-  margin-bottom: 12px;
-}
-
+/* Course display */
 .course-description {
   font-size: 1em;
   color: #666;
@@ -173,12 +134,11 @@ body {
 }
 
 .course-image {
-  width: 100%; 
-  height: auto; 
+  width: 100%;
+  height: auto;
   border-radius: 8px;
   margin-bottom: 12px;
 }
-
 
 .course-actions {
   display: flex;
@@ -193,6 +153,72 @@ body {
   margin: 8px;
 }
 
+/* Three.js animation styling */
+.three-animation {
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  /* Use flexbox to center contents */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background: #fff; /* Set background to white */
+  position: relative; /* Keep it behind the content */
+  z-index: -1; /* Keep it behind the content */
+}
+/* Course listing */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 courses per row */
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1; /* Place courses above animation */
+}
+
+.course-container {
+  display: flex; /* Make it a flex container */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-start; /* Push button to the bottom */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+  max-width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevent overflow */
+  position: relative; /* For hover effect */
+}
+
+
+
+/* Other styles remain the same */
+
+.course-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.course-title {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center; /* Center the title */
+}
+
+/* For responsive design */
+@media (max-width: 900px) {
+  .course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .course-link {
   padding: 8px 16px;
   background-color: #007bff;
@@ -201,7 +227,10 @@ body {
   border-radius: 4px;
   transition: background-color 0.2s;
   font-size: 0.9rem;
-  margin-left: 130px;
+  display: block; /* Ensure it takes full width */
+  text-align: center; /* Center text */
+  margin-top: 10px; /* Add space above */
+  align-self: flex-end;
 }
 
 .course-link:hover {
@@ -222,6 +251,8 @@ body {
 .course-button:hover {
   background-color: #0056b3;
 }
+
+/* One course styling */
 .onecourse {
   display: flex;
   flex-direction: column;
@@ -229,11 +260,98 @@ body {
   padding: 20px;
   max-width: 800px;
   margin: auto;
-  
 }
-.saved-courses-grid{
-    display: flex;
+
+/* Scroll-triggered home display */
+/* Home display section */
+.home-display {
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  padding: 50px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(50px); /* Start from below */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+.home-display.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move to its position */
+}
+
+.animated-info {
+  display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  text-align: center;
+  max-width: 900px;
+  color: black;
+}
+
+.animated-info h2 {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 20px;
+  font-weight: 700;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.animated-info p {
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 30px;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.animated-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  color: #999;
+  animation: fadeInUp 2.5s ease-in-out;
+}
+
+.animated-info ul li {
+  padding: 10px 0;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.animated-info ul li:hover {
+  color: #fff; /* Highlight on hover */
+}
+
+.animated-info ul li::before {
+  content: '✔';
+  color: #fff;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Keyframe animations */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
